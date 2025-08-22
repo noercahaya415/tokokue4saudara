@@ -510,8 +510,8 @@
     let cart = [];
     // Koordinat rumah makan (sesuaikan dengan lokasi sebenarnya)
     const RESTAURANT_LOCATION = {
-      lat: -6.3284352,
-      lng: 106.6714169,
+      lat: -3.360113,
+      lng: 114.6561066,
       name: "4Saudara"
     };
  
@@ -795,7 +795,7 @@
         if (catatan) message += `\n*Catatan:* ${catatan}\n`;
         message += `\nTerima kasih!`;
         
-        waLink.href = `https://wa.me/6285880428160?text=${encodeURIComponent(message)}`;
+        waLink.href = `https://wa.me/62882021032641?text=${encodeURIComponent(message)}`;
         waLink.style.display = 'block';
       } else {
         waLink.style.display = 'none';
@@ -902,7 +902,7 @@
      };
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbx1yR9nS12iKKxDDu2wU99TyyfmuiC7fMEJuPCapD6AW0Ee7LdSoD4AE-d9GbNszwWQnA/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbyirUmri-KWbJuLipTe91xME-e1z4HEhvB-gTIkQmQyxa5q_kv1-hL6Bor-o5xpChU9dg/exec', {
       method: 'POST',
       body: JSON.stringify(data)
       });
