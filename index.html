@@ -850,22 +850,19 @@
        ]
     };
 
-    // Fungsi displayMenu yang disederhanakan (hanya untuk Produk)
     function displayMenu() {
-      const menuList = document.getElementById('menu-list');
-      
-      // Hanya buat grid untuk Produk
-      if (menuData.Produk && !document.getElementById('Produk-grid')) {
-        const ProdukSection = document.createElement('div');
-        drinkSection.className = 'menu-category';
-        drinkSection.innerHTML = '<h3>Produk</h3><div class="menu-grid" id="Produk-grid"></div>';
-        menuList.appendChild(drinkSection);
-        
-        menuData.Produk.forEach(item => {
-          document.getElementById('Produk-grid').appendChild(createMenuItem(item));
-        });
-      }
-    }
+	const menuList = document.getElementById('menu-list');
+    // Hanya buat grid untuk Produk
+		if (menuData.Produk && !document.getElementById('produk-grid')) {
+			const produkSection = document.createElement('div');
+			produkSection.className = 'menu-category';
+			produkSection.innerHTML = '<h3>Produk</h3><div class="menu-grid" id="produk-grid"></div>';
+			menuList.appendChild(produkSection);
+			menuData.Produk.forEach(item => {
+			document.getElementById('produk-grid').appendChild(createMenuItem(item));
+		});
+	   }
+	}
     
     document.addEventListener('DOMContentLoaded', () => {
       displayMenu();
